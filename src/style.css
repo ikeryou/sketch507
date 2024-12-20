@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.js-svh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100svh;
+  pointer-events: none;
+}
+
+.js-lvh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: max(100dvh, 100lvh);
+  pointer-events: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Code Pro', monospace;
+  line-height: 1;
+}
+
+html, body {
+  background-color: #FFF;
+}
+
+.js-tgSVG {
+  position: fixed;
+  top: 0;
+  left: -9999px;
+  z-index: 9999;
+}
+
+.s-gpu {
+  will-change: transform;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+.l-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 120px 40px;
+}
+
+.l-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  
+}
+
+.l-main-item {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.l-main-item input {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #000;
+  padding: 0 0px;
+}
+
+.l-main-item-text {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #000;
+  margin-left: 1em;
+}
+
+.l-main-item-text span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  font-size: 14px;
+  z-index: 9999;
+  font-weight: bold;
+}
+
+.l-main-submit {
+  padding: 0.5em 2em;
+  font-size: 12px;
+  font-size: 16px;
+  margin-top: 60px;
+  display: block;
+}
+
+.l-height {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 300vh;
+}
+
+.l-debug {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  background-color: #000;
+  color: #FFF;
+  font-size: 12px;
+  display: none;
+}
+.l-info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 40px;
+  color: #fff;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 9999;
+}
+.l-info p {
+  font-size: 14px;
+  color: inherit;
+  background-color: #000;
+  padding: 5px 20px 5px 20px;
+}
+.l-info a {
+  color: inherit;
+  text-decoration: line-through;
+}
+.l-info a:hover {
+  text-decoration: none;
+}
+
+@media screen and (max-width:768px) {
+  .l-info {
+    justify-content: flex-start;
+    margin: 20px;
+    height: auto;
+  }
+  .l-info p {
+    font-size: 10px;
+  }
+
+  .l-wrapper {
+    padding: 100px 20px;
+  }
+
+  .l-main-item {
+    width: 60%;
+  }
+}
